@@ -8,51 +8,51 @@ const PartnersSection = () => {
 
   const staff = [
     { 
-      name: 'John Smith', 
+      name: 'Cedrick Komba', 
       position: 'CEO & Founder',
-      photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+      photo: 'public/logo/960eccae-deaa-4afc-a754-e7e982680fea.jpg',
       description: 'Leading our company with 20+ years of logistics experience'
     },
     { 
-      name: 'Sarah Johnson', 
-      position: 'Operations Manager',
+      name: 'Kally Mukeba', 
+      position: 'Operations and IT Manager',
       photo: 'public/logo/960eccae-deaa-4afc-a754-e7e982680fea.jpg',
       description: 'Ensuring smooth operations and customer satisfaction'
     },
     { 
-      name: 'Michael Chen', 
+      name: 'Michael Mabuma', 
       position: 'Logistics Coordinator',
-      photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
+      photo: 'public/logo/960eccae-deaa-4afc-a754-e7e982680fea.jpg',
       description: 'Coordinating international shipments and customs'
     },
     { 
-      name: 'Emily Rodriguez', 
+      name: 'Careine Koma', 
       position: 'Customer Service Lead',
-      photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face',
+      photo: 'public/logo/960eccae-deaa-4afc-a754-e7e982680fea.jpg',
       description: 'Providing exceptional customer support and solutions'
     },
     { 
-      name: 'David Wilson', 
+      name: 'Arsene Komba', 
       position: 'Fleet Manager',
-      photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face',
+      photo: 'public/logo/960eccae-deaa-4afc-a754-e7e982680fea.jpg',
       description: 'Managing our transportation fleet and drivers'
     },
     { 
-      name: 'Lisa Anderson', 
+      name: 'Ordick Komba', 
       position: 'Finance Director',
-      photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face',
+      photo: 'public/logo/960eccae-deaa-4afc-a754-e7e982680fea.jpg',
       description: 'Overseeing financial operations and planning'
     },
     { 
-      name: 'Robert Taylor', 
+      name: 'Salem', 
       position: 'Warehouse Supervisor',
-      photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face',
+      photo: 'public/logo/960eccae-deaa-4afc-a754-e7e982680fea.jpg',
       description: 'Supervising warehouse operations and inventory'
     },
     { 
-      name: 'Jennifer Brown', 
+      name: 'Elianne Komba', 
       position: 'Safety Coordinator',
-      photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face',
+      photo: 'public/logo/960eccae-deaa-4afc-a754-e7e982680fea.jpg',
       description: 'Ensuring safety compliance and training programs'
     },
   ];
