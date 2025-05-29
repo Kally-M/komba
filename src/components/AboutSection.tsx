@@ -1,34 +1,37 @@
 
 import { Users, Award, Zap, Target } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const AboutSection = () => {
+  const { t } = useLanguage();
+
   const stats = [
-    { number: '15+', label: 'Years Experience' },
-    { number: '500+', label: 'Happy Clients' },
-    { number: '10K+', label: 'Shipments Delivered' },
-    { number: '99.9%', label: 'On-Time Delivery' }
+    { number: '15+', label: t('about.stats.experience') },
+    { number: '500+', label: t('about.stats.clients') },
+    { number: '10K+', label: t('about.stats.shipments') },
+    { number: '99.9%', label: t('about.stats.onTime') }
   ];
 
   const values = [
     {
       icon: Target,
-      title: 'Reliability',
-      description: 'We deliver on our promises with consistent, dependable service that you can count on.'
+      title: t('about.values.reliability.title'),
+      description: t('about.values.reliability.description')
     },
     {
       icon: Zap,
-      title: 'Efficiency',
-      description: 'Streamlined processes and cutting-edge technology ensure fast, cost-effective solutions.'
+      title: t('about.values.efficiency.title'),
+      description: t('about.values.efficiency.description')
     },
     {
       icon: Award,
-      title: 'Excellence',
-      description: 'We strive for the highest standards in every aspect of our freight and logistics services.'
+      title: t('about.values.excellence.title'),
+      description: t('about.values.excellence.description')
     },
     {
       icon: Users,
-      title: 'Partnership',
-      description: 'We build lasting relationships with our clients, becoming an extension of their business.'
+      title: t('about.values.partnership.title'),
+      description: t('about.values.partnership.description')
     }
   ];
 
@@ -38,11 +41,10 @@ const AboutSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            About <span className="text-freight-gold">Our Company</span>
+            {t('about.title')}
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            With over 15 years of experience in the logistics industry, Komba LaJoie Business Freight Solution 
-            has established itself as a trusted partner for businesses worldwide. connecting South Africa and Democratic Republic of Congo.
+            {t('about.subtitle')}
           </p>
         </div>
 
@@ -66,36 +68,24 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div className="animate-slide-in-left">
             <h3 className="text-3xl font-bold text-white mb-6">
-              Leading the Future of Logistics
+              {t('about.leading.title')}
             </h3>
             <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
-              <p>
-                Founded with a vision to revolutionize the freight industry, we combine traditional 
-                logistics expertise with innovative technology solutions to deliver unparalleled service.
-              </p>
-              <p>
-                Our commitment to excellence has earned us the trust of businesses across various 
-                industries, from small startups to Fortune 500 companies. We understand that every 
-                shipment is critical to your success.
-              </p>
-              <p>
-                Today, we operate a global network spanning over 17 countries, with state-of-the-art 
-                facilities and a team of logistics professionals dedicated to your success.
-              </p>
+              <p>{t('about.leading.paragraph1')}</p>
+              <p>{t('about.leading.paragraph2')}</p>
+              <p>{t('about.leading.paragraph3')}</p>
             </div>
           </div>
 
           <div className="animate-slide-in-right">
             <div className="bg-freight-gold/10 backdrop-blur-sm border border-freight-gold/20 rounded-2xl p-8">
-              <h4 className="text-2xl font-bold text-freight-gold mb-6">Our Mission</h4>
+              <h4 className="text-2xl font-bold text-freight-gold mb-6">{t('about.mission.title')}</h4>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                To provide innovative, reliable, and cost-effective freight solutions that empower 
-                businesses to grow and succeed in the global marketplace.
+                {t('about.mission.description')}
               </p>
-              <h4 className="text-2xl font-bold text-freight-gold mb-6">Our Vision</h4>
+              <h4 className="text-2xl font-bold text-freight-gold mb-6">{t('about.vision.title')}</h4>
               <p className="text-gray-300 text-lg leading-relaxed">
-                To be the world's most trusted logistics partner, setting new standards for 
-                excellence in freight transportation and supply chain management.
+                {t('about.vision.description')}
               </p>
             </div>
           </div>
@@ -103,7 +93,7 @@ const AboutSection = () => {
 
         {/* Values */}
         <div>
-          <h3 className="text-3xl font-bold text-white text-center mb-12">Our Core Values</h3>
+          <h3 className="text-3xl font-bold text-white text-center mb-12">{t('about.values.title')}</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div

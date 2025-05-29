@@ -1,43 +1,46 @@
 
 import { Truck, Ship, Plane, Package, MapPin, BarChart3 } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ServicesSection = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
       icon: Truck,
-      title: 'Ground Freight',
-      description: 'Reliable ground transportation services for regional and national deliveries.',
-      features: ['Door-to-door delivery', 'Real-time tracking', 'Flexible scheduling']
+      title: t('services.ground.title'),
+      description: t('services.ground.description'),
+      features: [t('services.ground.feature1'), t('services.ground.feature2'), t('services.ground.feature3')]
     },
     {
       icon: Ship,
-      title: 'Ocean Freight',
-      description: 'Cost-effective ocean shipping solutions for international cargo transportation.',
-      features: ['FCL & LCL options', 'Port-to-port service', 'Customs clearance']
+      title: t('services.ocean.title'),
+      description: t('services.ocean.description'),
+      features: [t('services.ocean.feature1'), t('services.ocean.feature2'), t('services.ocean.feature3')]
     },
     {
       icon: Plane,
-      title: 'Air Freight',
-      description: 'Fast and secure air cargo services for time-sensitive shipments worldwide.',
-      features: ['Express delivery', 'Temperature controlled', 'Dangerous goods certified']
+      title: t('services.air.title'),
+      description: t('services.air.description'),
+      features: [t('services.air.feature1'), t('services.air.feature2'), t('services.air.feature3')]
     },
     {
       icon: Package,
-      title: 'Warehousing',
-      description: 'Secure storage and distribution centers with advanced inventory management.',
-      features: ['Climate controlled', '24/7 security', 'Inventory management']
+      title: t('services.warehousing.title'),
+      description: t('services.warehousing.description'),
+      features: [t('services.warehousing.feature1'), t('services.warehousing.feature2'), t('services.warehousing.feature3')]
     },
     {
       icon: MapPin,
-      title: 'Last Mile Delivery',
-      description: 'Efficient final delivery solutions to ensure your packages reach their destination.',
-      features: ['Same-day delivery', 'Signature required', 'Photo confirmation']
+      title: t('services.lastMile.title'),
+      description: t('services.lastMile.description'),
+      features: [t('services.lastMile.feature1'), t('services.lastMile.feature2'), t('services.lastMile.feature3')]
     },
     {
       icon: BarChart3,
-      title: 'Supply Chain Management',
-      description: 'End-to-end supply chain optimization and management services.',
-      features: ['Analytics & reporting', 'Route optimization', 'Cost reduction']
+      title: t('services.supply.title'),
+      description: t('services.supply.description'),
+      features: [t('services.supply.feature1'), t('services.supply.feature2'), t('services.supply.feature3')]
     }
   ];
 
@@ -46,10 +49,16 @@ const ServicesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-freight-black mb-6">
-            Our <span className="text-freight-gold">Services</span>
+            {t('services.title').split(' ').map((word, index) => 
+              word === 'Services' || word === 'Nos' ? (
+                <span key={index} className="text-freight-gold">{word} </span>
+              ) : (
+                <span key={index}>{word} </span>
+              )
+            )}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive logistics solutions tailored to meet your business needs with precision and reliability.
+            {t('services.subtitle')}
           </p>
         </div>
 
